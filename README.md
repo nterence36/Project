@@ -6,4 +6,7 @@ Challenges i need help in
 
 How to restrict the prompt to accept only integers
 How to position prompt at center of page
-How to make dies roll only when the roll dice is clicked and not any click on screeng
+How to make dies roll only when the roll dice is clicked and not any click on screen
+
+Resoureces:
+dcode YouTube - https://www.youtube.com/watch?v=M3InbHr0WAc

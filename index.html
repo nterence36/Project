@@ -5,18 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sum-Of-Dice-Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
 <body>
+     <h2>ROLL DICE GAME</h2>
     <div class="dice-container">
+    
+        <!-- <p>This game compare the outcome of dice rolled to user's suggested sum</p> -->
+        
         <div class="dice">
             <div class="dice-dot"></div>
         </div>
         
+        <div class="animate"></div>
         
      </div>
+
+     <div class="input">
+        <div>
+         <input id="userInput" type ="number" placeholder="Number of dice to roll?">   
+            <input id="userInput2" type ="number" placeholder="Predited sum?">
+        </div>
+ 
+     </div>
+     <p id="result"></p>
      <button type="button" class="roll-dice">Roll Dice</button>
-        <input id="userInput" placeholder="Enter the number of dice you want to roll?">
-        <p id="result"></p>
 </body>
 </html>

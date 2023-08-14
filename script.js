@@ -1,3 +1,10 @@
+const resultEl = document.getElementById("result");
+
+let userInputEl = document.getElementById("userInput")
+let userPredict = document.getElementById("userInput2")
+const userPrediction = userPredict.value
+
+
 function createDice(number) {
 	const dotPositionMatrix = {
 		1: [
@@ -50,48 +57,42 @@ function createDice(number) {
 
 	return dice;
 }
-let numOfDice = prompt("Enter the number of dice you want to roll", 0)
 
 
-
-function randomizeDice(diceContainer, numOfDice) {
-	diceContainer.innerHTML = "";
-    let userInput = prompt('What is your guest sum of '+numOfDice+ ' dice you want to roll', 0)
-    if (userInput != parseInt(userInput)){
-        document.getElementById("result").innerHTML = "Enter an integer greaternthan 0"
-        
-    }
-    let userPrediction = parseInt(userInput)
-    let total = 0;
-   
-	for (let i = 0; i < numOfDice; i++) {
-        
-		const random = Math.floor((Math.random() * 6) + 1);
-        total += random
-       
-		const dice = createDice(random);
-
-		diceContainer.appendChild(dice);
-	}
-        if (sumGust === total){
-            document.getElementById("result").innerHTML = "Wooooooooo You won";
-        }else {
-            document.getElementById("result").innerHTML = "Wooooooooo You Loss";
-        }
-
-   console.log(total)
-   console.log(userPrediction)
-  
-}
 
 const diceContainer = document.querySelector(".dice-container");
 const rollDiceBtn = document.querySelector(".roll-dice");
-randomizeDice(diceContainer, numOfDice);
+//randomizeDice(diceContainer, );
 
-rollDiceBtn.addEventListener("onClick", () => {
-	const interval = setInterval(() => {
-		randomizeDice(diceContainer, numOfDice);
-	}, 50);
-
-	setTimeout(() => clearInterval(interval), 1);
+rollDiceBtn.addEventListener("click", () => {
+	
+	const Value1 = userInputEl.value;
+	const Value2 = parseInt(userPredict.value);
+		if((Value1 === 0) || (Value2 === 0)){
+			alert("You entered a 0 please enter a number above 0")
+		}
+		
+		diceContainer.innerHTML = "";
+	   
+		let total = 0;
+	   
+		for (let i = 0; i < Value1; i++) {
+			
+			const random = Math.floor((Math.random() * 6) + 1);
+			total += random
+		   
+			const dice = createDice(random);
+	
+			diceContainer.appendChild(dice);
+		}
+	 if(total < Value2 || total > Value2){
+		resultEl.textContent = "OUCH! you loss. You entered "+Value2+ " and the result was "+total;
+		
+	 }else if (total === Value2){
+		resultEl.textContent = "Wooooooooo You won";
+	 }else {
+		resultEl.textContent = "Enter a number above 0"
+	 }
+	document.getElementById('userInput').value = '';
+	document.getElementById('userInput2').value = '';
 });

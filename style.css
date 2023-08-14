@@ -1,18 +1,40 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	background-color: blanchedalmond;
+
+} 
+ 
+
 .dice-container {
 	display: flex;
-    
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	
+	width: 800px;
+	height: 700px;
+	margin-top: 50px;
+	background-image: url(dice.jpg);
     
 }
 
 .dice {
-
-	width: 80px;
-	height: 80px;
+	display: flex;
+	justify-content: center;
+	justify-self: center;
+	width: 100px;
+	height: 100px;
 	position: relative;
 	margin: 5px;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     display: flex;
+	/* background-color: rgb(57, 18, 18); */
+	background-color: whitesmoke;
+
 }
 
 .dice-dot {
@@ -21,7 +43,7 @@
 
 	width: 15px;
 	height: 15px;
-	background-color: #000000;
+	background-color: black;
 	border-radius: 50%;
 
 	/* Dot Positioning */
@@ -32,5 +54,82 @@
 }
 
 .roll-dice {
-	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	margin-top: 700px;
+	position: absolute;
+	background-color: rgb(213, 212, 235);
+	width: 100px;
+	height: 30px;
+	justify-items: center;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: larger;
+	
 }
+#result {
+	display: flex;
+	justify-content: center;
+	/* padding: 50px; */
+	margin-top: 400px;
+	position: absolute;
+	font-style: italic;
+	/* font-weight: 800; */
+	font-size: xx-large;
+	 background-color: rgba(255, 255, 255, 0.768); 
+}
+
+.input {
+	display: flex;
+	flex-direction:row;
+	margin-top: 500px;
+	position: absolute;
+	
+	
+}
+input {
+	
+	padding: 10px;
+	margin-right: 10px;
+}
+
+h2 {
+	display: flex;
+	justify-self: start;
+	position: absolute;
+	align-self: start;
+	margin-top: 100px;
+	color: white;
+	font-family: 'Tilt Prism', cursive;
+	z-index: 1;
+	font-size: 55px
+}
+/* How to get the h2 tag to the dice container
+How to increase space between two input tags and also how to increase input space
+ */
+
+ /* div > p:first-child {
+	display: flex;
+	justify-self: start;
+	align-self: start;
+	position: absolute;
+	color: white;
+	font-size: 48px;
+	/* font-family: 'Tilt Prism', cursive; */
+	
+/* }  */
+/* .animate {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	animation-name: example;
+	animation-duration: 4s;
+  }
+  
+  @keyframes example {
+	0%   {background-color:red; left:0px; top:0px;}
+	25%  {background-color:yellow; left:200px; top:0px;}
+	50%  {background-color:blue; left:200px; top:200px;}
+	75%  {background-color:green; left:0px; top:200px;}
+	100% {background-color:red; left:0px; top:0px;}
+  } */
