@@ -3,7 +3,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: 0;
-	background-color: blanchedalmond;
+	
 
 } 
  
@@ -32,7 +32,6 @@ body {
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     display: flex;
-	/* background-color: rgb(57, 18, 18); */
 	background-color: whitesmoke;
 
 }
@@ -59,11 +58,12 @@ body {
 	margin-top: 700px;
 	position: absolute;
 	background-color: rgb(213, 212, 235);
-	width: 100px;
-	height: 30px;
-	justify-items: center;
+	width: 130px;
+	height: 40px;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-size: larger;
+	font-size: x-large;
+	font-weight: 500px;
+	border-radius: 30px;
 	
 }
 #result {
@@ -75,7 +75,8 @@ body {
 	font-style: italic;
 	/* font-weight: 800; */
 	font-size: xx-large;
-	 background-color: rgba(255, 255, 255, 0.768); 
+	color: aliceblue;
+	 /* background-color: rgba(255, 255, 255, 0.768);  */
 }
 
 .input {
@@ -92,6 +93,18 @@ input {
 	margin-right: 10px;
 }
 
+#instructions {
+	display: flex;
+	
+	position: absolute;
+	align-self: flex-start;
+	margin-top: 200px;
+	color: white;
+	width: 750px;
+	z-index: 1;
+	/* height: 600px; */
+}
+
 h2 {
 	display: flex;
 	justify-self: start;
@@ -103,20 +116,8 @@ h2 {
 	z-index: 1;
 	font-size: 55px
 }
-/* How to get the h2 tag to the dice container
-How to increase space between two input tags and also how to increase input space
- */
 
- /* div > p:first-child {
-	display: flex;
-	justify-self: start;
-	align-self: start;
-	position: absolute;
-	color: white;
-	font-size: 48px;
-	/* font-family: 'Tilt Prism', cursive; */
-	
-/* }  */
+
 /* .animate {
 	width: 100px;
 	height: 100px;

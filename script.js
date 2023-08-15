@@ -3,6 +3,7 @@ const resultEl = document.getElementById("result");
 let userInputEl = document.getElementById("userInput")
 let userPredict = document.getElementById("userInput2")
 const userPrediction = userPredict.value
+//const lossImage = document.createElement(img)
 
 
 function createDice(number) {
@@ -62,7 +63,6 @@ function createDice(number) {
 
 const diceContainer = document.querySelector(".dice-container");
 const rollDiceBtn = document.querySelector(".roll-dice");
-//randomizeDice(diceContainer, );
 
 rollDiceBtn.addEventListener("click", () => {
 	
