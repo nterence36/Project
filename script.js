@@ -58,6 +58,13 @@ function createDice(number) {
 
 	return dice;
 }
+function openPopup(){
+	popup.classList.add("open-popup")
+}
+
+function closePopup(){
+	popup.classList.remove("open-popup")
+}
 
 
 
@@ -87,7 +94,7 @@ rollDiceBtn.addEventListener("click", () => {
 		}
 	 if(total < Value2 || total > Value2){
 		resultEl.textContent = "OUCH! you loss. You entered "+Value2+ " and the result was "+total;
-		
+		openPopup();
 	 }else if (total === Value2){
 		resultEl.textContent = "Wooooooooo You won";
 	 }else {
